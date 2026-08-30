@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YKTB — Yayasan Kepulauan Tukang Besi Wakatobi</title>
+<meta name="description" content="Yayasan Kepulauan Tukang Besi Wakatobi — konservasi, budaya, masyarakat, dan pembangunan berkelanjutan di wilayah kepulauan Indonesia.">
+<style>
+:root{
+  --navy:#063b4c; --blue:#087f8c; --cyan:#18b7b0; --sand:#f3e7cf;
+  --cream:#fffaf1; --ink:#16333b; --white:#fff; --muted:#668087;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(3,48,62,.94);backdrop-filter:blur(10px);color:white}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.5px;font-size:19px}
+.logo span{display:block;font-size:10px;font-weight:400;opacity:.8;letter-spacing:1.5px}
+.links{display:flex;gap:25px;font-size:14px}
+.links a:hover{color:#7ce7df}
+.menu{display:none;background:none;border:0;color:#fff;font-size:25px}
+.hero{min-height:92vh;padding-top:72px;display:flex;align-items:center;position:relative;overflow:hidden;color:#fff;
+background:linear-gradient(90deg,rgba(2,40,52,.92),rgba(2,76,87,.60)),url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 -1px;height:120px;background:linear-gradient(transparent,var(--cream))}
+.hero-content{position:relative;z-index:1;max-width:760px;padding:80px 0}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.45);padding:7px 14px;border-radius:50px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}
+h1{font-size:clamp(42px,6vw,74px);line-height:1.04;margin:0 0 22px}
+.hero p{font-size:19px;max-width:650px;color:#e9ffff}
+.btn{display:inline-block;padding:13px 21px;border-radius:7px;font-weight:700;margin:8px 8px 0 0}
+.btn-primary{background:var(--cyan);color:#063b4c}
+.btn-light{border:1px solid rgba(255,255,255,.5);color:white}
+section{padding:85px 0}
+.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:38px;line-height:1.15;margin:8px 0 18px;color:var(--navy)}
+.lead{font-size:18px;color:#4e686f;max-width:760px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-img{min-height:420px;border-radius:20px;background:url('https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=1000&q=85') center/cover;box-shadow:0 18px 45px #063b4c22}
+.quote{border-left:4px solid var(--cyan);padding-left:18px;font-weight:700;color:var(--navy);margin-top:25px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+.card{background:white;border:1px solid #e4eee9;border-radius:16px;padding:28px;box-shadow:0 8px 25px #063b4c0c;transition:.2s}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 35px #063b4c18}
+.icon{font-size:30px}
+.card h3{color:var(--navy);margin:12px 0 7px}
+.card p{color:var(--muted);margin:0}
+.dark{background:var(--navy);color:#fff}
+.dark h2{color:#fff}.dark .lead{color:#c9e1e4}.dark .eyebrow{color:#70e1da}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+.stat{padding:25px;border:1px solid #ffffff22;border-radius:15px}
+.stat b{display:block;font-size:34px;color:#72e5dc}
+.stat span{font-size:13px;color:#c8dfe2}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:210px 210px;gap:12px;margin-top:35px}
+.gallery div{border-radius:14px;background-size:cover;background-position:center}
+.g1{grid-row:1/3;background-image:url('https://images.unsplash.com/photo-1540202404-a2f29016b523?auto=format&fit=crop&w=1200&q=85')}
+.g2{background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=85')}
+.g3{background-image:url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=700&q=85')}
+.g4{background-image:url('https://images.unsplash.com/photo-1544550285-f813152fb2fd?auto=format&fit=crop&w=700&q=85')}
+.g5{background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=700&q=85')}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.contactbox{background:white;border-radius:18px;padding:30px;border:1px solid #e4eee9}
+footer{background:#032d3a;color:#c5dde0;padding:35px 0}
+footer .foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.small{font-size:13px;color:#8eb2b8}
+@media(max-width:800px){
+ .links{display:none}.menu{display:block}.navin{height:64px}
+ .hero{padding-top:64px;min-height:88vh}.about,.contact{grid-template-columns:1fr}
+ .cards{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}
+ .gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}.g1{grid-row:auto;grid-column:1/3}
+ footer .foot{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<nav><div class="container navin">
+  <a class="logo" href="#home">YKTB<span>YAYASAN KEPULAUAN TUKANG BESI WAKATOBI</span></a>
+  <div class="links">
+    <a href="#tentang">Tentang</a><a href="#program">Program</a><a href="#biosfer">Cagar Biosfer</a><a href="#galeri">Galeri</a><a href="#kontak">Kontak</a>
+  </div>
+  <button class="menu" onclick="document.querySelector('.links').style.display=document.querySelector('.links').style.display==='flex'?'none':'flex'">☰</button>
+</div></nav>
+
+<header class="hero" id="home"><div class="container hero-content">
+  <div class="badge">Wakatobi • Indonesia</div>
+  <h1>Merawat Laut,<br>Menguatkan Masyarakat.</h1>
+  <p>Yayasan Kepulauan Tukang Besi Wakatobi (YKTB) membangun kolaborasi antara masyarakat, budaya, ilmu pengetahuan, dan alam untuk masa depan kepulauan yang berkelanjutan.</p>
+  <a class="btn btn-primary" href="#program">Lihat Program</a>
+  <a class="btn btn-light" href="#tentang">Tentang YKTB</a>
+</div></header>
+
+<section id="tentang"><div class="container about">
+  <div class="about-img"></div>
+  <div>
+    <div class="eyebrow">Tentang Kami</div>
+    <h2>Berangkat dari Wakatobi, belajar untuk kepulauan Indonesia.</h2>
+    <p class="lead">YKTB lahir dari konteks sosial-ekologis Kepulauan Tukang Besi dan Kabupaten Wakatobi, dengan semangat memperkuat hubungan antara manusia, budaya, dan alam.</p>
+    <p>Kami menggabungkan nilai dan pengetahuan lokal dengan ilmu pengetahuan, inovasi, serta kemitraan untuk mendorong pengelolaan sumber daya alam yang berkelanjutan.</p>
+    <div class="quote">“Kekuatan Cerita Komunitas” — menjadikan pengalaman, pengetahuan, dan suara masyarakat sebagai kekuatan perubahan.</div>
+  </div>
+</div></section>
+
+<section id="program"><div class="container">
+  <div class="eyebrow">Fokus Kerja</div><h2>Program YKTB</h2>
+  <p class="lead">Mendorong konservasi yang hidup bersama masyarakat, kebudayaan, dan ekonomi lokal.</p>
+  <div class="cards">
+    <article class="card"><div class="icon">🌊</div><h3>Konservasi Atol</h3><p>Penguatan konservasi atol berbasis kearifan lokal dan pengetahuan masyarakat pesisir.</p></article>
+    <article class="card"><div class="icon">🌿</div><h3>Huma & Budaya</h3><p>Dokumentasi, pemetaan, revitalisasi, dan penguatan pengetahuan tradisional sebagai bagian dari konservasi.</p></article>
+    <article class="card"><div class="icon">⛵</div><h3>Floating Conservation Center</h3><p>Ruang bergerak untuk edukasi, komunikasi, konservasi, dan penguatan kembali tradisi maritim.</p></article>
+    <article class="card"><div class="icon">🐠</div><h3>Ekosistem Laut</h3><p>Perlindungan terumbu karang, blue carbon, dan peningkatan ketahanan ekosistem terhadap perubahan iklim.</p></article>
+    <article class="card"><div class="icon">👥</div><h3>Masyarakat & Ekonomi</h3><p>Penguatan kapasitas manusia, mata pencaharian, dan ekonomi lokal yang selaras dengan kelestarian alam.</p></article>
+    <article class="card"><div class="icon">🎓</div><h3>Pemuda & Literasi</h3><p>Membuka ruang bagi generasi muda untuk belajar, berinovasi, dan mengambil peran dalam pembangunan berkelanjutan.</p></article>
+  </div>
+</div></section>
+
+<section class="dark" id="biosfer"><div class="container">
+  <div class="eyebrow">Cagar Biosfer</div><h2>Wakatobi untuk masa depan yang berkelanjutan.</h2>
+  <p class="lead">YKTB mendukung kolaborasi antara pemerintah, masyarakat, komunitas, pemuda, akademisi, dan mitra untuk memperkuat fungsi konservasi, pembangunan berkelanjutan, dan pembelajaran dalam lanskap kepulauan.</p>
+  <div class="stats">
+    <div class="stat"><b>142</b><span>Pulau di Kabupaten Wakatobi</span></div>
+    <div class="stat"><b>97%</b><span>Wilayah berupa perairan</span></div>
+    <div class="stat"><b>2012</b><span>Penetapan Cagar Biosfer Wakatobi</span></div>
+    <div class="stat"><b>∞</b><span>Ruang untuk kolaborasi</span></div>
+  </div>
+</div></section>
+
+<section id="galeri"><div class="container">
+  <div class="eyebrow">Dokumentasi</div><h2>Cerita dari Kepulauan</h2>
+  <p class="lead">Ruang visual untuk menampilkan kegiatan lapangan, masyarakat, laut, budaya, dan pembelajaran YKTB.</p>
+  <div class="gallery"><div class="g1"></div><div class="g2"></div><div class="g3"></div><div class="g4"></div><div class="g5"></div></div>
+</div></section>
+
+<section id="kontak"><div class="container contact">
+  <div><div class="eyebrow">Mari Berkolaborasi</div><h2>Bangun perubahan dari kepulauan.</h2><p class="lead">Kami terbuka untuk kemitraan, penelitian, pendanaan, pendidikan, dokumentasi, dan inisiatif konservasi berbasis masyarakat.</p></div>
+  <div class="contactbox">
+    <h3>Yayasan Kepulauan Tukang Besi Wakatobi</h3>
+    <p>📍 Kabupaten Wakatobi, Sulawesi Tenggara, Indonesia</p>
+    <p>✉️ Email: <em>tambahkan email YKTB</em></p>
+    <p>📱 WhatsApp: <em>tambahkan nomor YKTB</em></p>
+    <p>🌐 Media sosial: <em>tambahkan tautan resmi</em></p>
+  </div>
+</div></section>
+
+<footer><div class="container foot">
+  <div><strong>YKTB</strong><div class="small">Yayasan Kepulauan Tukang Besi Wakatobi</div></div>
+  <div class="small">© 2026 YKTB. Konservasi • Budaya • Masyarakat • Kepulauan</div>
+</div></footer>
+</body>
+</html>
